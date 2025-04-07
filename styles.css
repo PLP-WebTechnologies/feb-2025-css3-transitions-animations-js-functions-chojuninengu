@@ -1,0 +1,136 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #222;
+    color: #f0f0f0;
+}
+
+body.dark-mode .animation-box {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Animation box styles */
+.animation-box {
+    width: 200px;
+    height: 200px;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Transition for smooth property changes */
+    transition: all 0.3s ease;
+}
+
+/* Button styles */
+.animated-btn {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.animated-btn:hover {
+    background-color: #0b7dda;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.animated-btn:active {
+    transform: translateY(0);
+}
+
+/* Animation classes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bounce {
+    animation: bounce 1s ease infinite;
+}
+
+.spin {
+    animation: spin 2s linear infinite;
+}
+
+.pulse {
+    animation: pulse 1.5s ease infinite;
+}
+
+.slow-animation {
+    animation-duration: 3s;
+}
+
+.fast-animation {
+    animation-duration: 0.5s;
+}
+
+/* Controls section */
+.controls {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+body.dark-mode .controls {
+    background-color: #333;
+}
+
+.preferences {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
